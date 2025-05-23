@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
+import MapPage from "./pages/MapPage";
 import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient();
@@ -23,8 +24,8 @@ const App = () => (
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/map" element={<MapPage />} />
             {/* Add more routes as we implement them */}
-            {/* <Route path="/map" element={<MapPage />} /> */}
             {/* <Route path="/marketplace" element={<MarketplacePage />} /> */}
             {/* <Route path="/freelance" element={<FreelancePage />} /> */}
             {/* <Route path="/travel" element={<TravelPage />} /> */}
