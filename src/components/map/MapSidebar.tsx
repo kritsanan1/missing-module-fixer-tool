@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { MapLocation } from "@/types/common";
 import { 
   Bitcoin, 
-  Ethereum, 
+  Coins, 
   ExternalLink, 
   Star, 
   Store, 
@@ -86,7 +86,7 @@ export function MapSidebar() {
   const getCurrencyIcon = (currency: string) => {
     switch (currency) {
       case "btc": return <Bitcoin className="h-4 w-4 text-amber-400" />;
-      case "eth": return <Ethereum className="h-4 w-4 text-blue-400" />;
+      case "eth": return <Coins className="h-4 w-4 text-blue-400" />;
       default: return <CircleDollarSign className="h-4 w-4 text-green-400" />;
     }
   };

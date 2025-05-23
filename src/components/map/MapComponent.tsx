@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Loader2, Bitcoin, Ethereum, Store, Coffee, Briefcase, CircleDollarSign } from "lucide-react";
+import { Loader2, Bitcoin, Coins, Store, Coffee, Briefcase, CircleDollarSign } from "lucide-react";
 
 export function MapComponent() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
@@ -38,7 +38,7 @@ export function MapComponent() {
     if (currencies.includes("btc")) {
       return <Bitcoin className="h-4 w-4 text-black" />;
     } else if (currencies.includes("eth")) {
-      return <Ethereum className="h-4 w-4 text-black" />;
+      return <Coins className="h-4 w-4 text-black" />;
     } else {
       return icon;
     }
