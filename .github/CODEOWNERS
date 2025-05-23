@@ -1,0 +1,17 @@
+
+# These owners will be the default owners for everything in the repo
+* @project-admin
+
+# Documentation files
+/docs/ @docs-team
+
+# Frontend code
+/src/components/ @frontend-team
+/src/pages/ @frontend-team
+/src/contexts/ @frontend-team
+
+# API layer
+/src/lib/api/ @api-team
+
+# Configuration files
+*.config.ts @devops-team
