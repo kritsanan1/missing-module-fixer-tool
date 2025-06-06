@@ -10,6 +10,8 @@ import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import MapPage from "./pages/MapPage";
 import MarketplacePage from "./pages/MarketplacePage";
+import FreelancePage from "./pages/FreelancePage";
+import TravelPage from "./pages/TravelPage";
 import { AuthProvider } from "./contexts/AuthContext";
 import { CartProvider } from "./contexts/CartContext";
 
@@ -29,9 +31,9 @@ const App = () => (
               <Route path="/register" element={<Register />} />
               <Route path="/map" element={<MapPage />} />
               <Route path="/marketplace" element={<MarketplacePage />} />
+              <Route path="/freelance" element={<FreelancePage />} />
+              <Route path="/travel" element={<TravelPage />} />
               {/* Add more routes as we implement them */}
-              {/* <Route path="/freelance" element={<FreelancePage />} /> */}
-              {/* <Route path="/travel" element={<TravelPage />} /> */}
               {/* <Route path="/dashboard" element={<DashboardPage />} /> */}
               {/* <Route path="/verification" element={<VerificationPage />} /> */}
               <Route path="*" element={<NotFound />} />
