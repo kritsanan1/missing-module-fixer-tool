@@ -54,25 +54,25 @@ export default function FreelancePage() {
               Browse Jobs
             </TabsTrigger>
           </TabsList>
+        
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-6">
+            <div className="lg:col-span-1">
+              <FreelanceFilters 
+                filters={activeFilters} 
+                onFilterChange={setActiveFilters} 
+                activeTab={activeTab}
+              />
+            </div>
+            <div className="lg:col-span-3">
+              <TabsContent value="freelancers" className="mt-0">
+                <FreelancerGrid filters={activeFilters} />
+              </TabsContent>
+              <TabsContent value="jobs" className="mt-0">
+                <JobList filters={activeFilters} />
+              </TabsContent>
+            </div>
+          </div>
         </Tabs>
-
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          <div className="lg:col-span-1">
-            <FreelanceFilters 
-              filters={activeFilters} 
-              onFilterChange={setActiveFilters} 
-              activeTab={activeTab}
-            />
-          </div>
-          <div className="lg:col-span-3">
-            <TabsContent value="freelancers" className="mt-0">
-              <FreelancerGrid filters={activeFilters} />
-            </TabsContent>
-            <TabsContent value="jobs" className="mt-0">
-              <JobList filters={activeFilters} />
-            </TabsContent>
-          </div>
-        </div>
       </div>
       
       <PostJobDialog open={isPostJobOpen} onClose={() => setIsPostJobOpen(false)} />
