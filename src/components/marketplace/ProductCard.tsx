@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Product } from "@/types/marketplace";
 import { useCart } from "@/contexts/CartContext";
-import { Bitcoin, Ethereum } from "lucide-react";
+import { Bitcoin, Coins } from "lucide-react";
 
 interface ProductCardProps {
   product: Product;
@@ -29,7 +29,7 @@ export function ProductCard({ product, layout }: ProductCardProps) {
       case "BTC":
         return <Bitcoin className="h-4 w-4" />;
       case "ETH":
-        return <Ethereum className="h-4 w-4" />;
+        return <Coins className="h-4 w-4" />;
       default:
         return <span className="text-xs font-mono">{currency}</span>;
     }
