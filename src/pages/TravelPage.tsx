@@ -45,37 +45,37 @@ export default function TravelPage() {
               Experiences
             </TabsTrigger>
           </TabsList>
-        </Tabs>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          <div className="lg:col-span-1">
-            <TravelFilters 
-              filters={activeFilters} 
-              onFilterChange={setActiveFilters} 
-              activeTab={activeTab}
-            />
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-6">
+            <div className="lg:col-span-1">
+              <TravelFilters 
+                filters={activeFilters} 
+                onFilterChange={setActiveFilters} 
+                activeTab={activeTab}
+              />
+            </div>
+            <div className="lg:col-span-3">
+              <TabsContent value="hotels" className="mt-0">
+                <TravelListings 
+                  type="hotels" 
+                  filters={activeFilters} 
+                />
+              </TabsContent>
+              <TabsContent value="flights" className="mt-0">
+                <TravelListings 
+                  type="flights" 
+                  filters={activeFilters} 
+                />
+              </TabsContent>
+              <TabsContent value="experiences" className="mt-0">
+                <TravelListings 
+                  type="experiences" 
+                  filters={activeFilters} 
+                />
+              </TabsContent>
+            </div>
           </div>
-          <div className="lg:col-span-3">
-            <TabsContent value="hotels" className="mt-0">
-              <TravelListings 
-                type="hotels" 
-                filters={activeFilters} 
-              />
-            </TabsContent>
-            <TabsContent value="flights" className="mt-0">
-              <TravelListings 
-                type="flights" 
-                filters={activeFilters} 
-              />
-            </TabsContent>
-            <TabsContent value="experiences" className="mt-0">
-              <TravelListings 
-                type="experiences" 
-                filters={activeFilters} 
-              />
-            </TabsContent>
-          </div>
-        </div>
+        </Tabs>
         
         <div className="mt-12 bg-[#0c1427] border border-blue-900/20 rounded-lg p-6">
           <div className="flex items-start gap-4 mb-4">
